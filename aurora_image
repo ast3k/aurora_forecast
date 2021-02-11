@@ -1,0 +1,15 @@
+#!/bin/sh -
+#
+#
+PATH=/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/bin/
+
+tmp_file=`mktemp`
+file_url='/var/www/aurora/pub/aurora_forecast_europe.webp'
+ftp -o $tmp_file https://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg
+
+convert $tmp_file -rotate 105 $tmp_file
+convert -crop 450x540+324+280 $tmp_file $file_url
+#convert $tmp_file -alpha set -channel a -evaluate set 81% $file_url
+rm $tmp_file
+chown -R www:www /var/www/aurora/pub/
+chmod -R 755 /var/www/aurora/pub/
