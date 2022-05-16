@@ -1,0 +1,13 @@
+{
+"h2":"viimeisin revontuliennuste",
+"moon":"kuu",
+"now":"nyt!",
+"h3":["seuravat päivät", "pääkohdat"],
+"next_days_th":["milloin", "kp arvo", "kuu", "kuun koko"],
+"definition_h3":"Määritelmä",
+"key":[
+    "Revontulet aiheuttaa <a href='https://fi.wikipedia.org/wiki/Aurinkotuuli'>aurinkotuulen</a> korkeaenergiaisten hiukkasten vuorovaikutus <a href='https://fi.wikipedia.org/wiki/Ionosfääri'>maan yläilmakehän</a> atomien kanssa. Revontulien väri riippuu kaasuatomeista, johon hiukkanen törmää. Happi näkyy <span style='color:#0ad503'>vihreänä</span> värinä alemmalla kehällä ja <span style='color:red'>punaisena</span> ylemmillä. Vety näkyy <a href='https://fi.wikipedia.org/wiki/Vety'>sinisenä</a> värinä alemmalla kehällä ja muuttuu <span style='color:purple'>violetiksi</span> ylemmällä kehällä. Myös typpi näkyy <a href='https://fi.wikipedia.org/wiki/Typpi'>sinisinä</a> revontulina.",
+    "<a href='https://en.wikipedia.org/wiki/K-index'><dfn>K<sub>p</sub>-arvo</dfn></a> on erinomainen indikaattori, jolla voidaan tunnistaa häiriöitä <a href='https://fi.wikipedia.org/wiki/Maan_magneettikenttä'>Maan magneettikehässä</a>. Tämän sivuston tiedot tuottaa <a href='https://www.noaa.gov'>NOOAn</a>", 
+    "<dfn><a href='https://fi.wikipedia.org/wiki/Revontulet'>Revontulet</a></dfn> aiheutuvat <a href='https://fi.wikipedia.org/wiki/Aurinkomyrsky'>aurinkomyrskyn</a> varautuneiden hiukkasten osumisesta Maan <a href='https://fi.wikipedia.org/wiki/Ilmakehä'>ilmakehään</a>. Kirkkaina öinä on mahdollista todistaa tämä ilmiöseuraavilla leveyspiireillä:"
+    ]
+}

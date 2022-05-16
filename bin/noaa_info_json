@@ -4,6 +4,7 @@
 PATH=/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/bin/
 
 url='https://services.swpc.noaa.gov/text/3-day-forecast.txt'
+#url='https://astrek.net/pub/3-day-forecast.txt'
 tmp_a=`mktemp`
 
 ftp -o - $url | grep -C4 "09-12UT" | grep -C4 "09-12UT" | sed "s/^.*UT//; s/^[ \t]*//g; s/[ \t]*$//; s/  /-/g; s/--/%/g; s/% /|/g; s/%%/|/g; s/|-/|/g" > $tmp_a

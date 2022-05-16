@@ -1,0 +1,12 @@
+{
+"h2":"északi fény előrejelzés",
+"moon":"hold",
+"now":"most!",
+"h3":["következő napok", "kulcsok"],
+"next_days_th":["dátum", "kp index", "holdfázis", "holdméret"],
+"key":[
+    "A <a href='https://hu.wikipedia.org/wiki/Napszél'>napszél</a> az <a href='https://hu.wikipedia.org/wiki/Ionoszféra'>ionoszféra</a> atomjait gerjeszti, és az emissziós spektrumtól függően különböző   színeket szabadít fel. Az oxigén <span style='color:#0ad503'>zöld</span> és <span style='color:red'>vörös</span>, a nitrogén <a href='https://hu.wikipedia.org/wiki/Nitrogén'>kék</a> és <span style='color:purple'>lila</span> színben világít. A hidrogén kéket is kibocsát.",
+    "A Kp index kiváló mutatója a <a href='https://hu.wikipedia.org/wiki/Földi_mágneses_mező'>Föld mágneses mezőében</a> bekövetkező zavaroknak. Ennek a helynek a Kp index adatait a <a href='https://www. noaa.gov'>NOAA</a> szolgáltatja.",
+    "Az <dfn><a href='https://hu.wikipedia.org/wiki/Sarki_fény'>aurora</a></dfn> a <a href='https://hu.wikipedia.org/wiki/Geomágneses_vihar'>geomágneses vihar</a> részecskéinek izzó bizonyítéka, amely    ütközik a légkörrel. Tiszta éjszaka folyamán lehessen tanúja a jelenségeknek olyan szélességi fokokról, mint:"
+    ]
+}

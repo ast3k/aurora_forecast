@@ -61,11 +61,11 @@ $af = json_decode($file_json, true);
     <meta property="og:title" content="Aurora Forecast: Now Kp '.$af['next_hours'][0][1].'!" />
     <meta property="og:description" content="On a clear night maybe visible from places like: '.$lat_by_kp[$af['next_hours'][0][1]].'" />';
 ?>  
-    <meta property="og:image" content="https://inlap.land/pub/aurora_forecast_europe.webp" />
-    <meta property="og:url" content="https://inlap.land" />
+    <meta property="og:image" content="https://astrek.net/pub/aurora_forecast_europe.webp" />
+    <meta property="og:url" content="https://astrek.net" />
     <meta name="twitter:card" content="summary_large_image" />
   
-    <meta property="og:site_name" content="inLapland">
+    <meta property="og:site_name" content="astrek">
     <meta name="twitter:image:alt" content="Aurora Forecast">
     
     <meta name="twitter:site" content="@astreknet" />
@@ -230,7 +230,7 @@ $af = json_decode($file_json, true);
 
 </style>
 
-<title id="title">aurora forecast | in Lapland</title>
+<title id="title">aurora forecast | astrek</title>
 </head>
 
 <body>
@@ -369,7 +369,7 @@ $af = json_decode($file_json, true);
                     document.getElementById("key_2").innerHTML = myObj.key[2]
                 }
         }
-        language.open("GET", "lang."+ lang +".json", true)
+        language.open("GET", "langs/lang."+ lang +".json", true)
         language.send()
     }
     var now = document.getElementById('now');

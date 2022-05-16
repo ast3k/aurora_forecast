@@ -1,0 +1,27 @@
+Hi.
+Want the aurora forecast in your language? 
+Translate the text within the quotation marks "" and send it to langs@astrek.net. 
+Help your neighbors 
+
+"aurora forecast",
+"moon",
+"now",
+"next days", "keys",
+"date", "kp index", "moon phase", "moon size",
+"The solar wind excites the atoms on the ionosphere releasing diferent ligth colors depending on the emission spectrum. Oxygen releases green and red. Nitrogen glows blue and purple. Hydrogen also releases blue.",
+"The Kp index is an excellent indicator of disturbances in the Earth's magnetic field. The Kp index data of this site is provided by NOAA.",
+"An aurora is the glowing evidence of the particles from a geomagnetic storm colliding with the atmosphere. During a clear night could be possible to witness those phenomena from latitudes like:"
+
+
+if there's this wikipedia links in your language please attach the URL:
+
+solar wind: "https://en.wikipedia.org/wiki/Solar_wind"
+ionosphere: "https://en.wikipedia.org/wiki/Ionosphere"
+emission spectrum: "https://en.wikipedia.org/wiki/Emission_spectrum"
+nitrogen: "https://en.wikipedia.org/wiki/Nitrogen"
+hydrogen: "https://en.wikipedia.org/wiki/Hydrogen"
+K-index: "https://en.wikipedia.org/wiki/K-index"
+Earth's magnetic field: "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field"
+aurora: "https://en.wikipedia.org/wiki/Aurora"
+geomagnetic storm: "https://en.wikipedia.org/wiki/Geomagnetic_storm"
+atmosphere: "https://en.wikipedia.org/wiki/Atmosphere_of_Earth" 

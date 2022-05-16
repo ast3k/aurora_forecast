@@ -8,4 +8,4 @@
 PATH=/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/bin/
 
 pfctl -qt ipesaos -T add `tail -180 /var/www/logs/[a-s]*access.log | egrep "think|wp|admin|phpunit" | awk '{ print $2 }' | sort | uniq` 
-pfctl -t ipesaos -T show > /var/www/aurora/pub/keepaknockin_table.txt
+pfctl -t ipesaos -T show > /var/www/aurora/pub/keepaknockin_blacklist.txt

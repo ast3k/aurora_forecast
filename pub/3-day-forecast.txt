@@ -1,0 +1,53 @@
+:Product: 3-Day Forecast
+:Issued: 2021 Sep 25 1325 UTC
+# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center
+#
+A. NOAA Geomagnetic Activity Observation and Forecast
+
+The greatest observed 3 hr Kp over the past 24 hours was 3 (below NOAA
+Scale levels).
+The greatest expected 3 hr Kp for Sep 26-Sep 28 2021 is 6 (NOAA Scale
+G2).
+
+NOAA Kp index breakdown Sep 26-Sep 28 2021
+
+            Sep 25     Sep 26     Sep 27
+00-03UT        2          5 (G1)     2     
+03-06UT        2          6 (G2)     2     
+06-09UT        1          4          2     
+09-12UT        1          4          2     
+12-15UT        2          4          2     
+15-18UT        4          3          2     
+18-21UT        4          3          2     
+21-00UT        5 (G1)     3          2     
+
+Rationale: G1 (Minor) geomagnetic storm conditions are likely late on 26
+Sep, and G1-G2 (Minor-Moderate) geomagnetic storms are likely early on
+27 Sep, due to positive polarity CH HSS influence.
+
+B. NOAA Solar Radiation Activity Observation and Forecast
+
+Solar radiation, as observed by NOAA GOES-16 over the past 24 hours, was
+below S-scale storm level thresholds.
+
+Solar Radiation Storm Forecast for Sep 26-Sep 28 2021
+
+              Sep 26  Sep 27  Sep 28
+S1 or greater    1%      1%      1%
+
+Rationale: No S1 (Minor) or greater solar radiation storms are expected.
+No significant active region activity favorable for radiation storm
+production is forecast.
+
+C. NOAA Radio Blackout Activity and Forecast
+
+No radio blackouts were observed over the past 24 hours.
+
+Radio Blackout Forecast for Sep 26-Sep 28 2021
+
+              Sep 26        Sep 27        Sep 28
+R1-R2            5%            5%            5%
+R3 or greater    1%            1%            1%
+
+Rationale: No R1 (Minor) or greater radio blackouts are expected.  No
+significant active region flare activity is forecast.

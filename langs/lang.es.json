@@ -1,0 +1,12 @@
+{
+"h2":"parte de auroras",
+"moon":"luna",
+"now":"ahora!",
+"h3":["próximos días", "claves"],
+"next_days_th":["fecha", "índice kp", "fase lunar", "tamaño de la luna"],
+"key":[
+    "El <a href='https://es.wikipedia.org/wiki/Viento_solar'>viento solar</a> excita los átomos de la <a href='https://es.wikipedia.org/wiki/Ionosfera'>ionosfera</a> y estos emiten <a href='https://es.wikipedia.org/wiki/Fotón'>fotones</a> de diferentes colores dependiendo del <a href='https://es.wikipedia.org/wiki/Espectro_de_emisión'>espectro de emisión</a>. El oxígeno emite colores <span style='color:#0ad503'>verdes</span> y <span style='color:red'>rojos</span> en las superiores. El nitrógeno emite <a href='https://es.wikipedia.org/wiki/Nitrógeno'>azules</a> y <span style='color:purple'>violetas</span>.",
+    "El <a href='https://es.wikipedia.org/wiki/Índice_geomagnético_K'><dfn>índice K<sub>p</sub></dfn></a> es un indicador excelente de perturbaciones en el <a href='https://es.wikipedia.org/wiki/Campo_magnético_terrestre'>campo magnético terrestre</a>. Los datos de esta web relativos este índice se actualizan de los servidores de <a href='https://www.noaa.gov'>NOAA</a>",
+    "Una <dfn><a href='https://es.wikipedia.org/wiki/Aurora_polar'>aurora</a></dfn> es la prueba lumínica de la colisión entre las partículas procedentes de una <a href='https://es.wikipedia.org/wiki/Tormenta_geomagnética'>tormenta solar</a> con nuestra <a href='https://es.wikipedia.org/wiki/Atmósfera_terrestre'>atmósfera</a>. Bajo un cielo oscuro y despejado sería posible contemplar este fenomeno en condiciones y latitudes similares las siguientes:"
+    ]
+}

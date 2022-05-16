@@ -1,0 +1,12 @@
+{
+"h2":"prévision aurorale",
+"moon":"luna",
+"now":"actuellement!",
+"h3":["prochains jours", "clés"],
+"next_days_th":["date", "indice kp", "phase de la lune", "taille de la lune"],
+"key":[
+    "Le <a href='https://fr.wikipedia.org/wiki/Vent_solaire'>vent solaire</a> excite les atomes de l'<a href='https://fr.wikipedia.org/wiki/Ionosphère'>ionosphère</a> en libérant différentes couleurs de lumière en fonction du <a href='https://fr.wikipedia.org/wiki/Spectre_d%27émission'>spectre d'émission</a>. L'oxygène libère du <span style='color:#0ad503'>vert</span> et du <span style='color:red'>rouge</span>. L'azote brille en <a href='https://fr.wikipedia.org/wiki/Azote'>bleu</a> et <span style='color:purple'>violet</span>. L'hydrogène libère également du <a href='https://fr.wikipedia.org/wiki/Hydrogène'>bleu</a>.",
+    "L'<a href='https://fr.wikipedia.org/wiki/Indice_Kp'><dfn>indice K<sub>p</sub></dfn></a> est un excellent indicateur des perturbations du <a href='https://fr.wikipedia.org/wiki/Champ_magnétique_terrestre'>champ magnétique terrestre</a>. Les données d'indice Kp de ce site sont fournies par la <a href='https://www.noaa.gov'>NOAA</a>.",
+    "Une <dfn><a href='https://fr.wikipedia.org/wiki/Aurore_polaire'>aurore</a></dfn> est la preuve éclatante des particules d'une <a href='https://fr.wikipedia.org/wiki/Orage_magnétique'>tempête géomagnétique</a> entrant en collision avec l'<a href='https://fr.wikipedia.org/wiki/Atmosphère_terrestre'>atmosphère</a>. Pendant une nuit claire, il pourrait être possible d'observer ces phénomènes depuis des latitudes telles que:"
+    ]
+}

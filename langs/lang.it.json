@@ -1,0 +1,12 @@
+{
+"h2":"Previsione dell'Aurora Boreale",
+"moon":"lun",
+"now":"adesso!",
+"h3":["giorni seguenti", "le chiavi"],
+"next_days_th":["data", "kp indice", "fase lunare", "dimensioni della luna"],
+"key":[
+    "Il <a href='https://it.wikipedia.org/wiki/Vento_solare'>vento solare</a> eccita gli atomi nell'<a href='https://it.wikipedia.org/wiki/Ionosfera'>ionosfera</a> terrestre che in seguito emettono luce di differenti colori a seconda dello <a href='https://it.wikipedia.org/wiki/Spettro_di_emissione'>spettro d'emissione</a>. La luce di colore <span style='color:#0ad503'>verde</span> e <span style='color:red'>rosso</span> e’ rilasciata dall'ossigeno. La luce di colore <a href='https://it.wikipedia.org/wiki/Idrogeno'>blue</a> e <span style='color:purple'>viola</span> invece e’ rilasciata dall'idrogeno",
+    "L'<a href='https://it.wikipedia.org/wiki/Indice_K'>indice Kp</a> e’ un'eccellente indicatore della forza del vento solare sul <a href='https://it.wikipedia.org/wiki/Indice_K'>campo magnetico terrestre</a>. L'indice Kp sul sito e’ fornito da <a href='https://www.noaa.gov'>NOAA</a>.",
+    "L'<dfn><a href='https://it.wikipedia.org/wiki/Aurora_polare'>aurora boreale</a></dfn> e’ un affascinante fenomeno naturale creato dalle particelle provenienti dalla <a href='https://it.wikipedia.org/wiki/Tempesta_solare'>tempesta solare</a> scontrate con l'<a href='https://it.wikipedia.org/wiki/Atmosfera_terrestre'>atmosfera terrestre</a>. Durante una notte chiara e’ possibile assistere a questo fenomeno dalla latitudine come:"
+    ]
+}
