@@ -90,7 +90,7 @@ if [ "`date -u "+%b %d"`" == "$day_0" ]||[ "`date -u "+%b %d"`" == "$day_1" ]||[
 
     cat $tmp_b | tr -d "\n" | sed 's/\]\[/\], \[/g; s/$/]}&/'>/var/www/aurora/pub/aurora_forecast.json
     rm $tmp_b
-    chown -R www:www /var/www/aurora/pub/
+    chown -R hugo:www /var/www/aurora/pub/
     chmod -R 755 /var/www/aurora/pub/
 else
     echo "Something's TERRIBLY wrong with the 48 aurora report" | mail -s"aurora next hours error" hugo

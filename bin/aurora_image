@@ -11,5 +11,5 @@ convert $tmp_file -rotate 105 $tmp_file
 convert -crop 450x540+324+280 $tmp_file $file_url
 #convert $tmp_file -alpha set -channel a -evaluate set 81% $file_url
 rm $tmp_file
-chown -R www:www /var/www/aurora/pub/
+chown -R hugo:www /var/www/aurora/pub/
 chmod -R 755 /var/www/aurora/pub/

@@ -369,7 +369,7 @@ $af = json_decode($file_json, true);
                     document.getElementById("key_2").innerHTML = myObj.key[2]
                 }
         }
-        language.open("GET", "langs/lang."+ lang +".json", true)
+        language.open("GET", "./langs/lang."+ lang +".json", true)
         language.send()
     }
     var now = document.getElementById('now');
