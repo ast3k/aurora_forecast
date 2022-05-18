@@ -1,11 +1,12 @@
 # aurora forecast
 Northern lights and moon phase web application
 
+![example](./example.png?style=centerme)
 img[src$="centerme"] {
   display:block;
   margin: 0 auto;
 }
-![example](./example.png)
+
 
 ## description
 * simple, light and fast
