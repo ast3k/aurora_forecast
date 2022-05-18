@@ -1,15 +1,11 @@
 # aurora forecast
 Northern lights and moon phase web application
 
-<style>
-.marginauto {
-    margin: 10px auto 20px;
-    display: block;
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
 }
-</style>
-
-
-<img width=30% src='./example.png' class='marginauto' />
+![example](https://astrek.net)
 
 ## description
 * simple, light and fast
