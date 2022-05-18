@@ -5,7 +5,7 @@ img[src$="centerme"] {
   display:block;
   margin: 0 auto;
 }
-![example](https://astrek.net)
+![example](./example.png)
 
 ## description
 * simple, light and fast
