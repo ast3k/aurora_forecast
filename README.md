@@ -2,7 +2,7 @@
 Northern lights and moon phase web application
 
 <p align="center">
-  <img src="./example.png" width=30% />
+  <img src="./example.png" width=45% />
 </p>
 
 
