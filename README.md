@@ -1,14 +1,29 @@
 # aurora forecast
-Northern lights and moon phase web application
+simple, intuitive, _light_ and fast **northern lights** and **moon phase** web application
 
 <p align="center">
   <img src="./example.png" width=45% />
 </p>
 
 
-## description
-* simple, light and fast
-* hosted on [OpenBSD](https://www.openbsd.org)
+## built with
+
+* [OpenBSD](https://www.openbsd.org)
+* [php](https://www.php.net)
 * updating data from [NOAA](http://www.noaa.gov/) 
-* phase of the moon by [pom(6)](https://man.openbsd.org/pom.6)
-* picture edited with [ImageMagick](https://imagemagick.org)
+* [pom(6)](https://man.openbsd.org/pom.6)
+* [ImageMagick](https://imagemagick.org)
+
+## roadmap
+
+* [x] adding automatic darkmode
+* [ ] multi-language:
+  - [x] english
+  - [x] spanish
+  - [x] finnish
+  - [x] french
+  - [x] italian
+  - [x] hungarian
+  - [ ] german
+  - [ ] swedish
+  - [ ] norwegian
