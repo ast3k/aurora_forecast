@@ -27,3 +27,4 @@ simple, intuitive, _light_ and fast **northern lights** and **moon phase** web a
   - [ ] german
   - [ ] swedish
   - [ ] norwegian
+ * [ ] full migrate to JavaScript
