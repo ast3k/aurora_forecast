@@ -57,14 +57,13 @@ $af = json_decode($file_json, true);
     <meta name="description" content="astrek aurora forecast, a fast, light, and responsive northern lights forecast" />
     <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, inlapland, guide, finland" />
     <meta name="Author" content="info@astrek.net" />
+    <meta name="twitter:card" content="summary" />
 <?php echo '
     <meta property="og:title" content="Aurora Forecast: Now Kp '.$af['next_hours'][0][1].'!" />
     <meta property="og:description" content="On a clear night maybe visible from places like: '.$lat_by_kp[$af['next_hours'][0][1]].'" />';
 ?>  
     <meta property="og:image" content="https://astrek.net/pub/aurora_forecast_europe.webp" />
     <meta property="og:url" content="https://astrek.net" />
-    <meta name="twitter:card" content="summary_large_image" />
-  
     <meta property="og:site_name" content="astrek">
     <meta name="twitter:image:alt" content="Aurora Forecast">
     
@@ -194,7 +193,6 @@ $af = json_decode($file_json, true);
 <!-- JAVASCRIPT STARTS -->
 <script>
     var lang = navigator.language.slice(0, 2) || navigator.userLanguage.slice(0, 2)
-
     if (( lang == 'es' ) || ( lang == 'fi' ) || ( lang == 'hu' ) || (lang == 'fr') || (lang == 'it')) {
         var language = new XMLHttpRequest()
         language.onreadystatechange = function() {
