@@ -7,10 +7,11 @@ url='https://services.swpc.noaa.gov/text/3-day-forecast.txt'
 #url='https://astrek.net/pub/3-day-forecast.txt'
 tmp_a=`mktemp`
 
-ftp -o - $url | grep -C4 "09-12UT" | grep -C4 "09-12UT" | sed "s/^.*UT//; s/^[ \t]*//g; s/[ \t]*$//; s/  /-/g; s/--/%/g; s/% /|/g; s/%%/|/g; s/|-/|/g" > $tmp_a
+ftp -o - $url | grep -C4 "09-12UT" | grep -C4 "09-12UT" | sed "s/^.*UT//; s/^[ \t]*//g; s/[ \t]*$//; s/         /|/g; s/       /|/g" > $tmp_a
 day_0=`cat $tmp_a | head -1 | awk -F"|" '{print $1}'`
 day_1=`cat $tmp_a | head -1 | awk -F"|" '{print $2}'`
 day_2=`cat $tmp_a | head -1 | awk -F"|" '{print $3}'`
+
 
 if [ "`date -u "+%b %d"`" == "$day_0" ]||[ "`date -u "+%b %d"`" == "$day_1" ]||[ "`date -u "+%b %d"`" == "$day_2" ]; then
     
