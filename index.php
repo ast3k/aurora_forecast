@@ -1,79 +1,151 @@
-<?php
-
-function get_color_by_kp($kp_index) {
-    if ($kp_index == 4):
-        return 'orange';
-    elseif ($kp_index > 4):
-        return 'red';
-    else:
-        return '#0ad503';
-    endif;
-}
-
-function get_moon_svg_by_size($m_size,$id_tag) {
-    if ($m_size < 0):
-        $a = 0; $b = abs($m_size); $c = abs($m_size)/3.9; $d = 100;
-    elseif ($m_size == 100):
-        $a = 100; $b = $c = 0; $d = 100;
-    elseif ($m_size == 50):
-        $a = 50; $b = $d = 0; $c = 100;
-    elseif ($m_size == -50):
-        $a = $b = 50; $c = 0; $d = 100;
-    else:
-        $a = $d = 0; $b = $m_size; $c = 100 - ($m_size/3.9);
-    endif;
-
-    return '
-            <svg class="svg_moon">
-                <title>'.abs($m_size).'%</title>
-                <linearGradient id="grad'.$id_tag.'" x1="'.$c.'%" x2="'.$d.'%">
-                    <stop offset="'.$a.'%" style="stop-color:rgba(204, 204, 204, 1);stop-opacity:1" />
-                    <stop offset="'.$b.'%" style="stop-color:rgba(204, 204, 204, 0);stop-opacity:0" />
-                </linearGradient>
-                <circle cx="50%" cy="50%" r="48%" stroke="#ccc" stroke-width="3%" fill="none" />
-                <circle cx="50%" cy="50%" r="42%"  fill="url(#grad'.$id_tag.')" />
-            </svg>';
-}
-
-$lat_by_kp = [  'Barrow (US), Reykjavik (IS), Inari (FI)',
-                'Fairbanks (US), Rovaniemi (FI)',
-                'Anchorage (US), Tórshavn (FO), Oulu (FI)',
-                'Calgary (CA), Ålesund (NO), Jyväskylä (FI)',
-                'Vancouver (CA), Stockholm (SV), Hobart (AU)',
-                'Toronto (CA), Edinburgh (GB), Devonport (AU)',
-                'New York (US), Hamburg (DE), Christchurch (NZ)',
-                'Nashville (US), Brussels (BE), Melbourne (AU)',
-                'San Francisco (US), Paris (FR), Sydney (AU)',
-                'Monterrey (MX), Oviedo (ES), Ushuaia (AR)' ];
-
-$file_json = file_get_contents("./pub/aurora_forecast.json");
-$af = json_decode($file_json, true);
-
-?>
 <!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="astrek aurora forecast, a fast, light, and responsive northern lights forecast" />
-    <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, inlapland, guide, finland" />
-    <meta name="Author" content="info@astrek.net" />
-    <meta name="twitter:card" content="summary" />
-<?php echo '
-    <meta property="og:title" content="Aurora Forecast: Now Kp '.$af['next_hours'][0][1].'!" />
-    <meta property="og:description" content="On a clear night maybe visible from places like: '.$lat_by_kp[$af['next_hours'][0][1]].'" />';
+    <meta charset = "UTF-8" >
+    <meta name="description" content="astrek aurora forecast, a fast, light, and responsive northern lights forecast" >
+    <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, inlapland, guide, finland" >
+    <meta name="Author" content="info@astrek.net" >
+    <meta name="twitter:card" content="summary" >
+<?php 
+    require_once 'functions.php';
 ?>  
-    <meta property="og:image" content="https://astrek.net/pub/aurora_forecast_europe.webp" />
-    <meta property="og:url" content="https://astrek.net" />
-    <meta property="og:site_name" content="astrek">
-    <meta name="twitter:image:alt" content="Aurora Forecast">
-    
-    <meta name="twitter:site" content="@astreknet" />
+    <meta property="og:title" content="Aurora Forecast: Now Kp <?php echo $af['next_hours'][0][1]; ?>!" >
+    <meta property="og:description" content="On a clear night maybe visible from places like: <?php echo $lat_by_kp[$af['next_hours'][0][1]]; ?>" >
+    <meta property="og:image" content="https://astrek.net/pub/aurora_forecast_europe.webp" >
+    <meta property="og:url" content="https://astrek.net" >
+    <meta property="og:site_name" content="astrek" >
+    <meta name="twitter:image:alt" content="Aurora Forecast" >
+    <meta name="twitter:site" content="@astreknet" >
 
-    <link rel="icon" type="image/png" sizes="196x196 160x160 96x96 64x64 32x32 16x16" href="favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180 120x120 76x76 72x72 60x60 57x57" href="favicon.svg" />
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+    <link rel="icon" type="image/png" sizes="196x196 160x160 96x96 64x64 32x32 16x16" href="favicon.svg" >
+    <link rel="apple-touch-icon" sizes="180x180 120x120 76x76 72x72 60x60 57x57" href="favicon.svg" >
 
-<title id="title">aurora forecast | astrek</title>
+<!-- CSS3 STARTS -->   
+    <style>
+@media screen and (prefers-color-scheme: light) {
+	:root {
+        --background-color: #006199;
+        --bg-color-transparent: rgba(0, 97, 153, 0.81);
+        --color: #ccc;
+        }
+}
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+            --background-color: #002D62;
+            --bg-color-transparent: rgba(0, 45, 98, 0.87);
+            --color: #ccc;
+        }
+}
+:root { color-scheme: light dark;}
+@media (max-width: 999px) {
+	:root {
+            --width: 100%;
+            --next-img-width: 99%;
+            --font-size: 270%
+        }
+}
+@media only screen and (min-width: 999px) and (max-width: 1400px) {
+	:root {
+            --width: 69%;
+            --next-img-width: 99%;
+            --font-size: 180%
+        }
+}
+@media  (min-width: 1400px) {
+	:root {
+            --width: 42%;
+            --next-img-width: 99%;
+            --font-size: 150%;
+        }
+}
+body {
+	width:var(--width);
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--color);
+        font-size: var(--font-size);
+        font-family: verdana;
+}
+header, section {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+}
+header { 
+        margin-top: 1%;
+        overflow: auto;
+}
+body, h2, #next, #forecast_img, #marquee ul, table { margin: 0 auto; }   
+.center_align, footer, h2, #marquee ul {text-align: center;}
+.right_align { text-align: right; }
+#marquee, #forecast_img, #keys  { border-radius: 0.45em; }
+#next_days table, #keys, footer { padding: 0.9em; }
+footer, #def, #lat { font-size: 0.6em; }
+#def li, #def table { margin-top: 0.9em; }
+.upsidedown { transform: scaleY(-1);}
+h2 {
+        font-size: 1.2em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0.6em;
+}
+h1, h3, th {
+        visibility: hidden;
+        display: none;
+}
+a {
+       color: #BAD7FF;
+        text-decoration: none;
+}
+#keys { border: 0.06em dashed var(--color); }   
+.svg_color { fill: var(--color); }
+.svg_text { 
+        fill: var(--background-color); 
+        font-family: 'Arial';
+        stroke-width: 0.03em;
+}
+#forecast_img {
+        width: var(--next-img-width);
+        display: block;
+}
+.svg_moon {
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+}          
+footer svg {
+        width: 3.6em;
+        height: 3.6em;
+}
+#marquee {
+        width:96%;
+        margin: -3.9em auto 0.9em auto;
+        position: relative;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+}
+#marquee::-webkit-scrollbar { display: none }
+#marquee ul, #donate {
+        list-style-type: none;
+        padding-left: 0;
+}
+#marquee li {
+        background-color: var(--bg-color-transparent);
+        cursor: pointer;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        padding: 0.3em;
+}   
+#next_days table { width: 100%; }
+    </style>
+    <title id="title">aurora forecast | astrek</title>
 </head>
 
 <body>
@@ -84,14 +156,20 @@ $af = json_decode($file_json, true);
 
     <div id="marquee">
         <ul>
-<?php 
-    echo '  <li><span id="now">now!</span><br/>
-            K<sub>p</sub> <span style="color:'.get_color_by_kp($af['next_hours'][0][1]).'">'.$af['next_hours'][0][1].'</span>  '.get_moon_svg_by_size($af['next_hours'][0][2],"hours").'</li>';
+            <li>
+                <span id="now">now!</span><br/>
+                K<sub>p</sub> <span style="color: <?php echo get_color_by_kp($af['next_hours'][0][1]); ?>"> <?php echo $af['next_hours'][0][1]; ?></span>  
+                <?php echo get_moon_svg_by_size($af['next_hours'][0][2],"hours"); ?>
+            </li>
         
+<?php 
     for ($i = 1; $i < 17; $i++) {
         echo '  
-            <li><span id="'.$af['next_hours'][$i][0].'h">'.gmdate("D, g:i", $af['next_hours'][$i][0]).' UTC</span><br/>
-            K<sub>p</sub> <span style="color:'.get_color_by_kp($af['next_hours'][$i][1]).'">'.$af['next_hours'][$i][1].'</span> '.get_moon_svg_by_size($af['next_hours'][$i][2],"h".$af['next_hours'][$i][0]).'</li>';
+            <li>
+                <span id="'.$af['next_hours'][$i][0].'h">'.gmdate("D, g:i", $af['next_hours'][$i][0]).' UTC</span><br/>
+                K<sub>p</sub> <span style="color:'.get_color_by_kp($af['next_hours'][$i][1]).'">'.$af['next_hours'][$i][1].'</span>
+                '.get_moon_svg_by_size($af['next_hours'][$i][2],"h".$af['next_hours'][$i][0]).'
+            </li>';
     }
 ?>
         </ul>
