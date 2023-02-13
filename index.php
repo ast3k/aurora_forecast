@@ -6,9 +6,7 @@
     <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, inlapland, guide, finland" >
     <meta name="Author" content="info@astrek.net" >
     <meta name="twitter:card" content="summary" >
-<?php 
-    require_once 'functions.php';
-?>  
+<?php require_once 'functions.php'; ?>  
     <meta property="og:title" content="Aurora Forecast: Now Kp <?php echo $af['next_hours'][0][1]; ?>!" >
     <meta property="og:description" content="On a clear night maybe visible from places like: <?php echo $lat_by_kp[$af['next_hours'][0][1]]; ?>" >
     <meta property="og:image" content="https://astrek.net/pub/aurora_forecast_europe.webp" >
@@ -17,8 +15,9 @@
     <meta name="twitter:image:alt" content="Aurora Forecast" >
     <meta name="twitter:site" content="@astreknet" >
 
-    <link rel="icon" type="image/png" sizes="196x196 160x160 96x96 64x64 32x32 16x16" href="favicon.svg" >
-    <link rel="apple-touch-icon" sizes="180x180 120x120 76x76 72x72 60x60 57x57" href="favicon.svg" >
+    <link rel="icon" href="favicon.svg" >
+    <link rel=”mask-icon” href=”mask-icon.svg” color=”#333333" >    
+    <link rel="apple-touch-icon" href="favicon.svg" >
 
 <!-- CSS3 STARTS -->   
     <style>
@@ -97,8 +96,8 @@ h1, h3, th {
         display: none;
 }
 a {
-       color: #BAD7FF;
-        text-decoration: none;
+    color: #BAD7FF;
+    text-decoration: none;
 }
 #keys { border: 0.06em dashed var(--color); }   
 .svg_color { fill: var(--color); }
@@ -117,8 +116,8 @@ a {
         vertical-align: middle;
 }          
 footer svg {
-        width: 3.6em;
-        height: 3.6em;
+        width: 3em;
+        height: 3em;
 }
 #marquee {
         width:96%;
@@ -131,7 +130,7 @@ footer svg {
         scrollbar-width: none;
 }
 #marquee::-webkit-scrollbar { display: none }
-#marquee ul, #donate {
+#marquee ul {
         list-style-type: none;
         padding-left: 0;
 }
