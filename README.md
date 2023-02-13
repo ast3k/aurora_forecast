@@ -17,7 +17,7 @@ simple, intuitive, _light_ and fast **northern lights** and **moon phase** web a
 ## roadmap
 
 * [x] adding automatic darkmode
-* [ ] multi-language:
+* [x] multi-language:
   - [x] english
   - [x] spanish
   - [x] finnish
@@ -27,4 +27,3 @@ simple, intuitive, _light_ and fast **northern lights** and **moon phase** web a
   - [ ] german
   - [ ] swedish
   - [ ] norwegian
- * [ ] full migrate to JavaScript
