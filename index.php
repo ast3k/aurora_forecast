@@ -261,7 +261,7 @@ footer svg {
             <ellipse class="svg_color" cx="30.860334" cy="28.963091" rx="9.4334364" ry="8.6228247" />
             <ellipse class="svg_color" cx="57.202381" cy="47.950161" rx="9.8349791" ry="9.520277" />
         </g>
-        <text class="svg_text" x="24" y="30"><tspan style="font-size:8.46667px;">0.06g</tspan></text>
+        <text class="svg_text" x="24" y="30"><tspan style="font-size:8.46667px;">0.03g</tspan></text>
         <text class="svg_text" x="15" y="51"><tspan style="font-size:22.5778px;">CO<tspan style="font-size:11.2889px">2</tspan></tspan></text>
         </svg>
     </a>
