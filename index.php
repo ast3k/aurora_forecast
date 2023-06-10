@@ -4,19 +4,14 @@
     <meta charset = "UTF-8" >
     <meta name="description" content="astrek aurora forecast, a fast, light, and responsive northern lights forecast" >
     <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, inlapland, guide, finland" >
-    <meta name="Author" content="info@astrek.net" >
-    <meta name="twitter:card" content="summary" >
+    <meta name="Author" content="hugo@astrek.net" >
 <?php require_once 'functions.php'; ?>  
     <meta property="og:title" content="Aurora Forecast: Now Kp <?php echo $af['next_hours'][0][1]; ?>!" >
     <meta property="og:description" content="On a clear night maybe visible from places like: <?php echo $lat_by_kp[$af['next_hours'][0][1]]; ?>" >
     <meta property="og:image" content="https://astrek.net/pub/aurora_forecast_europe.webp" >
     <meta property="og:url" content="https://astrek.net" >
     <meta property="og:site_name" content="astrek" >
-    <meta name="twitter:image:alt" content="Aurora Forecast" >
-    <meta name="twitter:site" content="@astreknet" >
-
-    <link rel="icon" href="favicon.svg" >
-    <link rel=”mask-icon” href=”mask-icon.svg” color=”#333333" >    
+    <link rel="icon" href="favicon.ico" >
     <link rel="apple-touch-icon" href="favicon.svg" >
 
 <!-- CSS3 STARTS -->   
