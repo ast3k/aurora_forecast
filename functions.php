@@ -29,8 +29,8 @@ function get_moon_svg_by_size($m_size,$id_tag) {
                     <stop offset="'.$a.'%" style="stop-color:rgba(204, 204, 204, 1);stop-opacity:1" />
                     <stop offset="'.$b.'%" style="stop-color:rgba(204, 204, 204, 0);stop-opacity:0" />
                 </linearGradient>
-                <circle cx="50%" cy="50%" r="48%" stroke="#ccc" stroke-width="3%" fill="none" />
-                <circle cx="50%" cy="50%" r="42%"  fill="url(#grad'.$id_tag.')" />
+                <circle cx="50%" cy="50%" r="45%" stroke="#ccc" stroke-width="0.18rem" fill="none" />
+                <circle cx="50%" cy="50%" r="39%"  fill="url(#grad'.$id_tag.')" />
             </svg>';
 }
 
