@@ -278,7 +278,7 @@ svg {
         language.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var myObj = JSON.parse(this.responseText)
-                    document.getElementById("title").innerHTML = myObj.h2 +' | in Lapland'
+                    document.getElementById("title").innerHTML = myObj.h2 +' | astrek'
                     document.getElementById("h2").innerHTML = myObj.h2
                     document.getElementById("now").innerHTML = myObj.now
                     document.getElementById("h3_0").innerHTML = myObj.h3[0]
