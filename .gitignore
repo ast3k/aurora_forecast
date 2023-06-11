@@ -1,3 +1,4 @@
+.gitignore
 pub/aurora_forecast.json
 pub/aurora_forecast_europe.webp
 pub/keepaknockin_blacklist.txt
