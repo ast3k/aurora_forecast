@@ -9,7 +9,7 @@ function get_color_by_kp($kp_index) {
     endif;
 }
 
-function get_moon_svg_by_size($m_size,$id_tag) {
+function get_moon_svg_by_size($m_size, $id_tag) {
     if ($m_size < 0):
         $a = 0; $b = abs($m_size); $c = abs($m_size)/3.9; $d = 100;
     elseif ($m_size == 100):

@@ -95,26 +95,16 @@ a {
     text-decoration: none;
 }
 #keys { border: 0.06em dashed var(--color); }   
-.svg_color { fill: var(--color); }
-.svg_text { 
-        fill: var(--background-color); 
-        font-family: 'Arial';
-        stroke-width: 0.03em;
-}
 #forecast_img {
         width: var(--next-img-width);
         display: block;
 }
-.svg_moon {
-        width: 1.5em;
-        height: 1.5em;
-        vertical-align: middle;
-}          
 
-footer svg {
+svg {
     width: 2.4rem;
     height: 2.4rem;
     fill: var(--color);
+    vertical-align: middle;
 }
 
 #marquee {
@@ -156,7 +146,7 @@ footer svg {
             <li>
                 <span id="now">now!</span><br>
                 K<sub>p</sub> <span style="color: <?php echo get_color_by_kp($af['next_hours'][0][1]); ?>"> <?php echo $af['next_hours'][0][1]; ?></span>  
-                <?php echo get_moon_svg_by_size($af['next_hours'][0][2],"hours"); ?>
+                <?php echo get_moon_svg_by_size($af['next_hours'][0][2], "hours"); ?>
             </li>
         
 <?php 
