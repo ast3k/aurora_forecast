@@ -1,0 +1,122 @@
+@media screen and (prefers-color-scheme: light) {
+	:root {
+        --background-color: #006199;
+        --bg-color-transparent: rgba(0, 97, 153, 0.81);
+        --color: #ccc;
+    }
+}
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+        --background-color: #002D62;
+        --bg-color-transparent: rgba(0, 45, 98, 0.87);
+        --color: #ccc;
+    }
+}
+:root { color-scheme: light dark;}
+@media (max-width: 999px) {
+	:root {
+        --width: 100%;
+        --next-img-width: 99%;
+        --font-size: 270%
+    }
+}
+@media only screen and (min-width: 999px) and (max-width: 1400px) {
+	:root {
+        --width: 69%;
+        --next-img-width: 99%;
+        --font-size: 180%
+    }
+}
+@media  (min-width: 1400px) {
+	:root {
+        --width: 42%;
+        --next-img-width: 99%;
+        --font-size: 150%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    border-radius: 0.6rem;
+}
+
+body {
+	width:var(--width);
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    font-family: verdana;
+}
+header, section {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+header { 
+    margin-top: 1%;
+    overflow: auto;
+}
+body, h2, #next, #forecast_img, #marquee ul, table { margin: 0 auto; }   
+.center_align, h2, footer, #marquee ul {text-align: center;}
+.right_align { text-align: right; }
+#next_days table, footer, #keys { padding: 0.9em; }
+#def, #lat { font-size: 0.6em; }
+#def li, #def table { margin-top: 0.9em; }
+.upsidedown { transform: scaleY(-1);}
+h2 {
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.6em;
+}
+h1, h3, th {
+    visibility: hidden;
+    display: none;
+}
+a {
+    color: #BAD7FF;
+    text-decoration: none;
+}
+#keys { border: 0.06em dashed var(--color); }   
+#forecast_img {
+    width: var(--next-img-width);
+    display: block;
+}
+
+svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color);
+    vertical-align: middle;
+}
+
+#marquee {
+    width:96%;
+    margin: -3.9em auto 0.9em auto;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+#marquee::-webkit-scrollbar { display: none }
+#marquee ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#marquee li {
+    background-color: var(--bg-color-transparent);
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 0.3em;
+}   
+#next_days table { width: 100%; }
