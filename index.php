@@ -105,13 +105,21 @@ $af = json_decode($file_json, true);
             --font-size: 150%;
         }
 }
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    border-radius: 0.6rem;
+}
+
 body {
 	width:var(--width);
-        padding: 0;
-        background-color: var(--background-color);
-        color: var(--color);
-        font-size: var(--font-size);
-        font-family: verdana;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    font-family: verdana;
 }
 header, section {
         -webkit-user-select: none;
@@ -127,7 +135,6 @@ header {
 body, h2, #next, #forecast_img, #marquee ul, table { margin: 0 auto; }   
 .center_align, h2, footer, #marquee ul {text-align: center;}
 .right_align { text-align: right; }
-#marquee, #forecast_img, #keys  { border-radius: 0.45em; }
 #next_days table, footer, #keys { padding: 0.9em; }
 #def, #lat { font-size: 0.6em; }
 #def li, #def table { margin-top: 0.9em; }
@@ -184,7 +191,9 @@ svg {
         padding: 0.3em;
 }   
 #next_days table { width: 100%; }
-    </style>
+
+</style>
+    
     <title id="title">aurora forecast | astrek</title>
 </head>
 
