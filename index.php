@@ -7,18 +7,11 @@ function get_color_by_kp($kp_index) {
 }
 
 function get_moon_svg_by_size($m_size, $id_tag) {
-    if ($m_size < 0):
-        $a = 0; $b = abs($m_size); $c = abs($m_size)/3.9; $d = 100;
-    elseif ($m_size == 100):
-        $a = 100; $b = $c = 0; $d = 100;
-    elseif ($m_size == 50):
-        $a = 50; $b = $d = 0; $c = 100;
-    elseif ($m_size == -50):
-        $a = $b = 50; $c = 0; $d = 100;
-    else:
-        $a = $d = 0; $b = $m_size; $c = 100 - ($m_size/3.9);
-    endif;
-
+    $a = ($m_size == 100 ? 100 : (abs($m_size) == 50 ? 50 : 0));
+    $b = (($m_size == 100) || ($m_size == 50) ? 0 : abs($m_size));
+    $c = ($m_size < 0 ? abs($m_size)/3.9 : (($m_size == 100) || ($m_size == -50) ? 0 : ($m_size == 50 ? 100 : 100 - ($m_size/3.9))));
+    $d = (($m_size < 0) || ($m_size == 100) ? 100 : 0);  
+        
     return '
             <svg class="svg_moon">
                 <title>'.abs($m_size).'%</title>
