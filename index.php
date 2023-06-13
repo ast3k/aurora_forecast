@@ -13,15 +13,15 @@ function get_moon_svg_by_size($m_size, $id_tag) {
     $d = (($m_size < 0) || ($m_size == 100) ? 100 : 0);  
         
     return '
-            <svg class="svg_moon">
-                <title>'.abs($m_size).'%</title>
-                <linearGradient id="grad'.$id_tag.'" x1="'.$c.'%" x2="'.$d.'%">
-                    <stop offset="'.$a.'%" style="stop-color:rgba(204, 204, 204, 1);stop-opacity:1" />
-                    <stop offset="'.$b.'%" style="stop-color:rgba(204, 204, 204, 0);stop-opacity:0" />
-                </linearGradient>
-                <circle cx="50%" cy="50%" r="45%" stroke="#ccc" stroke-width="0.18rem" fill="none" />
-                <circle cx="50%" cy="50%" r="45%"  fill="url(#grad'.$id_tag.')" />
-            </svg>';
+        <svg class="svg_moon">
+            <title>'.abs($m_size).'%</title>
+            <linearGradient id="grad'.$id_tag.'" x1="'.$c.'%" x2="'.$d.'%">
+                <stop offset="'.$a.'%" style="stop-color:rgba(204, 204, 204, 1);stop-opacity:1" />
+                <stop offset="'.$b.'%" style="stop-color:rgba(204, 204, 204, 0);stop-opacity:0" />
+            </linearGradient>
+            <circle cx="50%" cy="50%" r="45%" stroke="#ccc" stroke-width="0.18rem" fill="none" />
+            <circle cx="50%" cy="50%" r="45%"  fill="url(#grad'.$id_tag.')" />
+        </svg>';
 }
 
 $lat_by_kp = [  'Barrow (US), Reykjavik (IS), Inari (FI)',
@@ -35,8 +35,7 @@ $lat_by_kp = [  'Barrow (US), Reykjavik (IS), Inari (FI)',
                 'San Francisco (US), Paris (FR), Sydney (AU)',
                 'Monterrey (MX), Oviedo (ES), Ushuaia (AR)' ];
 
-$file_json = file_get_contents("./pub/aurora_forecast.json");
-$af = json_decode($file_json, true);
+$af = json_decode(file_get_contents("./pub/aurora_forecast.json"), true);
 
 ?>  
 
