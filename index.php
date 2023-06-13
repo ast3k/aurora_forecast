@@ -2,15 +2,8 @@
 <html lang="en">
 
 <?php 
-
 function get_color_by_kp($kp_index) {
-    if ($kp_index == 4):
-        return 'orange';
-    elseif ($kp_index > 4):
-        return 'red';
-    else:
-        return '#0ad503';
-    endif;
+    return ($kp_index == 4 ? 'orange' : ($kp_index > 4 ? 'red' : '#0ad503'));
 }
 
 function get_moon_svg_by_size($m_size, $id_tag) {
