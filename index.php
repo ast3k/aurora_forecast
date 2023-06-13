@@ -51,13 +51,9 @@ $af = json_decode($file_json, true);
     <meta property="og:url" content="https://astrek.net" >
     <meta property="og:site_name" content="astrek" >
     <link rel="icon" href="favicon.ico" >
-    <link rel="apple-touch-icon" href="favicon.svg" >
     <link rel="stylesheet" href="./astrek.css">
     <title id="title">aurora forecast | astrek</title>
 </head>
-
-
-
 
 <body>
 <header> 
