@@ -43,46 +43,48 @@
 }
 
 body {
-	width:var(--width);
     padding: 0;
     background-color: var(--background-color);
     color: var(--color);
     font-size: var(--font-size);
     font-family: verdana;
 }
+
 header, section {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: var(--width);
+    margin: 0 auto;
+    padding: 0.9rem;
 }
-header { 
-    margin-top: 1%;
-    overflow: auto;
-}
-body, h2, #next, #forecast_img, #marquee ul, table { margin: 0 auto; }   
+
+header {overflow: auto;}
+
+h1, h3, th {display: none;}
+h2, #next, #forecast_img, #marquee ul, table { margin: 0 auto; }   
 .center_align, h2, footer, #marquee ul {text-align: center;}
 .right_align { text-align: right; }
-#next_days table, footer, #keys { padding: 0.9em; }
+footer { padding: 0.9em; }
 #def, #lat { font-size: 0.6em; }
 #def li, #def table { margin-top: 0.9em; }
-.upsidedown { transform: scaleY(-1);}
+
 h2 {
-    font-size: 1.2em;
+    font-size: 1.5rem;
     position: absolute;
     left: 0;
     right: 0;
-    top: 0.6em;
+    top: 1.5rem;
 }
-h1, h3, th {
-    visibility: hidden;
-    display: none;
-}
+
+
 a {
     color: #BAD7FF;
     text-decoration: none;
 }
+
 #keys { border: 0.06em dashed var(--color); }   
 #forecast_img {
     width: var(--next-img-width);
@@ -106,11 +108,14 @@ svg {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
 }
+
 #marquee::-webkit-scrollbar { display: none }
+
 #marquee ul {
     list-style-type: none;
     padding-left: 0;
 }
+
 #marquee li {
     background-color: var(--bg-color-transparent);
     cursor: pointer;
@@ -119,4 +124,5 @@ svg {
     *zoom: 1;
     padding: 0.3em;
 }   
+
 #next_days table { width: 100%; }
