@@ -1,37 +1,35 @@
+:root { 
+    color-scheme: light dark;
+    --color: #ccc;
+}
 @media screen and (prefers-color-scheme: light) {
 	:root {
         --background-color: #006199;
         --bg-color-transparent: rgba(0, 97, 153, 0.81);
-        --color: #ccc;
     }
 }
 @media screen and (prefers-color-scheme: dark) {
 	:root {
         --background-color: #002D62;
         --bg-color-transparent: rgba(0, 45, 98, 0.87);
-        --color: #ccc;
     }
 }
-:root { color-scheme: light dark;}
 @media (max-width: 999px) {
 	:root {
         --width: 100%;
-        --next-img-width: 99%;
-        --font-size: 270%
+        --font-size: 2.7rem;
     }
 }
 @media only screen and (min-width: 999px) and (max-width: 1400px) {
 	:root {
         --width: 69%;
-        --next-img-width: 99%;
-        --font-size: 180%
+        --font-size: 1.8rem;
     }
 }
 @media  (min-width: 1400px) {
 	:root {
         --width: 42%;
-        --next-img-width: 99%;
-        --font-size: 150%;
+        --font-size: 1.5rem;
     }
 }
 
@@ -67,16 +65,16 @@ h1, h3, th {display: none;}
 h2, #next, #forecast_img, #marquee ul, table { margin: 0 auto; }   
 .center_align, h2, footer, #marquee ul {text-align: center;}
 .right_align { text-align: right; }
-footer { padding: 0.9em; }
-#def, #lat { font-size: 0.6em; }
-#def li, #def table { margin-top: 0.9em; }
+footer { padding: 0.9rem; }
+#def, #lat { font-size: 0.9rem; }
+#def li, #def table { margin-top: 0.9rem; }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     position: absolute;
     left: 0;
     right: 0;
-    top: 1.5rem;
+    top: 1.8rem;
 }
 
 
@@ -85,22 +83,22 @@ a {
     text-decoration: none;
 }
 
-#keys { border: 0.06em dashed var(--color); }   
+#keys { border: 0.09rem dashed var(--color); }   
 #forecast_img {
-    width: var(--next-img-width);
+    width: 99%;
     display: block;
 }
 
 svg {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.7rem;
+    height: 2.7rem;
     fill: var(--color);
     vertical-align: middle;
 }
 
 #marquee {
     width:96%;
-    margin: -3.9em auto 0.9em auto;
+    margin: -5.4rem auto 0.9rem auto;
     position: relative;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -122,7 +120,7 @@ svg {
     display: inline-block;
     *display: inline;
     *zoom: 1;
-    padding: 0.3em;
+    padding: 0.3rem;
 }   
 
 #next_days table { width: 100%; }
