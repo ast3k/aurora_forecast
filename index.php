@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php 
+ini_set('allow_url_fopen',1);
 function updateAuroraForecastImage() {
     $file_url = './pub/aurora_forecast_europe.webp';
     $tmp_file = tempnam(sys_get_temp_dir(), 'aurora_forecast');
