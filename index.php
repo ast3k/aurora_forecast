@@ -6,7 +6,7 @@ function updateAuroraForecastImage() {
     $file_url = './pub/aurora_forecast_europe.webp';
     $tmp_file = tempnam(sys_get_temp_dir(), 'aurora_forecast');
     $remote_url = 'https://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg';
-    $five_minutes_ago = time() - (5 * 60); // Five minutes ago
+    $five_minutes_ago = time() - (2 * 60); // Five minutes ago
     
     // Check if the file exists and is older than 5 minutes
     if (file_exists($file_url) && filemtime($file_url) > $five_minutes_ago) {
@@ -14,17 +14,7 @@ function updateAuroraForecastImage() {
     }
     
     // Download the image using curl
-    // Initialize a CURL session. 
-    $ch = curl_init();
-    // Return Page contents. 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    // Grab URL and pass it to the variable 
-    curl_setopt($ch, CURLOPT_URL, $remote_url); 
- 
-    $imageData = curl_exec($ch);
-
-
-    //$imageData = file_get_contents($remote_url);
+    $imageData = file_get_contents($remote_url);
     if ($imageData === false) {
         return; // Failed to fetch remote image
     }
