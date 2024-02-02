@@ -2,6 +2,55 @@
 <html lang="en">
 
 <?php 
+
+function updateAuroraForecastImage() {
+    $tmp_file = tempnam(sys_get_temp_dir(), 'aurora_forecast');
+    $file_url = './pub/aurora_forecast_europe.webp';
+    #$file_url = '/var/www/aurora/pub/aurora_forecast_europe.webp';
+    $remote_url = 'https://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg';
+    $five_minutes_ago = time() - (5 * 60); // Five minutes ago
+
+    // Check if the file exists and is older than 5 minutes
+    if (file_exists($file_url) && filemtime($file_url) > $five_minutes_ago) {
+        return; // Exit if the file is up to date
+    } 
+
+    // Download the image using curl
+    $ch = curl_init();
+    $fp = fopen($tmp_file, 'w');
+    curl_setopt($ch, CURLOPT_URL, $remote_url);
+    curl_setopt($ch, CURLOPT_FILE, $fp);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_exec($ch);
+    curl_close($ch);
+    fclose($fp);
+    
+    // Rotate the image
+    exec("convert $tmp_file -rotate 105 $tmp_file");
+    
+    // Crop the image
+    exec("convert $tmp_file -crop 450x540+324+280 $tmp_file");
+    
+    // Move the temporary file to its final location
+    copy($tmp_file, $file_url);
+    
+    // Remove the temporary file
+    unlink($tmp_file);
+    
+    // Change ownership and permissions
+    chown($file_url, posix_getpwuid(posix_geteuid())['name']);
+    chmod($file_url, 0755);
+    
+    // Change ownership and permissions of the directory
+    $dir = './pub/';
+    #$dir = '/var/www/aurora/pub/';
+    chown($dir, posix_getpwuid(posix_geteuid())['name']);
+    chmod($dir, 0755);
+}
+
+// Execute the function
+updateAuroraForecastImage();
+
 function get_color_by_kp($kp_index) {
     return ($kp_index == 4 ? 'orange' : ($kp_index > 4 ? 'red' : '#0ad503'));
 }
