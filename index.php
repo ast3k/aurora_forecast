@@ -2,7 +2,6 @@
 <html lang="en">
 
 <?php 
-ini_set('allow_url_fopen',1);
 function updateAuroraForecastImage() {
     $file_url = './pub/aurora_forecast_europe.webp';
     $tmp_file = tempnam(sys_get_temp_dir(), 'aurora_forecast');
@@ -15,7 +14,17 @@ function updateAuroraForecastImage() {
     }
     
     // Download the image using curl
-    $imageData = file_get_contents($remote_url);
+    // Initialize a CURL session. 
+    $ch = curl_init();
+    // Return Page contents. 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    // Grab URL and pass it to the variable 
+    curl_setopt($ch, CURLOPT_URL, $remote_url); 
+ 
+    $imageData = curl_exec($ch);
+
+
+    //$imageData = file_get_contents($remote_url);
     if ($imageData === false) {
         return; // Failed to fetch remote image
     }
