@@ -41,8 +41,8 @@ $af = json_decode(file_get_contents("./pub/aurora_forecast.json"), true);
 
 <head>
     <meta charset = "UTF-8" >
-    <meta name="description" content="astrek aurora forecast, a fast, light, and responsive northern lights forecast" >
-    <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, inlapland, guide, finland" >
+    <meta name="description" content="astrek aurora forecast, a fast, light, and responsive northern lights forecast web app" >
+    <meta name="Keywords" content="aurora, aurora forecast, lapland, northern lights, revontulet, guide, finland" >
     <meta name="Author" content="hugo@astrek.net" >
     <meta property="og:title" content="Aurora Forecast: Now Kp <?php echo $af['next_hours'][0][1]; ?>!" >
     <meta property="og:description" content="On a clear night maybe visible from places like: <?php echo $lat_by_kp[$af['next_hours'][0][1]]; ?>" >
