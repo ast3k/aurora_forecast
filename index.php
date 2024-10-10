@@ -2,47 +2,6 @@
 <html lang="en">
 
 <?php 
-function updateAuroraForecastImage() {
-    $file_url = './pub/aurora_forecast_europe.webp';
-    $tmp_file = tempnam(sys_get_temp_dir(), 'aurora_forecast');
-    $remote_url = 'https://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg';
-    $five_minutes_ago = time() - (2 * 60); // Five minutes ago
-    
-    // Check if the file exists and is older than 5 minutes
-    if (file_exists($file_url) && filemtime($file_url) > $five_minutes_ago) {
-        return; // Exit if the file is up to date
-    }
-    
-    // Download the image using curl
-    $imageData = file_get_contents($remote_url);
-    if ($imageData === false) {
-        return; // Failed to fetch remote image
-    }
-    
-    // Save the image data to the temporary file
-    file_put_contents($tmp_file, $imageData);
-    
-    // Create Imagick object from the temporary file
-    $imagick = new Imagick($tmp_file);
-    
-    // Rotate the image
-    $imagick->rotateImage('none', 105);
-    
-    // Crop the image
-    $imagick->cropImage(450, 540, 231, 180);
-    
-    // Set image format and save to file
-    $imagick->setImageFormat('webp');
-    $imagick->writeImage($file_url);
-    
-    // Remove the temporary file
-    unlink($tmp_file);
-}
-
-// Execute the function
-updateAuroraForecastImage();
-
-
 function get_color_by_kp($kp_index) {
     return ($kp_index == 4 ? 'orange' : ($kp_index > 4 ? 'red' : '#0ad503'));
 }
@@ -77,7 +36,6 @@ $lat_by_kp = [  'Barrow (US), Reykjavik (IS), Inari (FI)',
                 'Monterrey (MX), Oviedo (ES), Ushuaia (AR)' ];
 
 $af = json_decode(file_get_contents("./pub/aurora_forecast.json"), true);
-
 ?>  
 
 <head>
